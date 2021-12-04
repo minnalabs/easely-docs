@@ -2,4 +2,4 @@
 sidebar_position: 4
 ---
 
-# Creating an NFT
+# Embedding the Mint Button
