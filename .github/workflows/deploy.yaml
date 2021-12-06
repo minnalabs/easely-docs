@@ -39,6 +39,7 @@ jobs:
           echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
 
       - name: Notify
+        uses: slackapi/slack-github-action@v1.14.0
         env:
           SLACK_BOT_TOKEN: ${{ inputs.slackbot-token }}
           SHORT_SHA: ${{ steps.vars.outputs.short_sha }}
