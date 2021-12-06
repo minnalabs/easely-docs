@@ -23,12 +23,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/minnalabs/easely-docs/tree/master/docs',
+          editUrl: 'https://github.com/minnalabs/easely-docs',
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/minnalabs/easely-docs/tree/master/blog',
+          editUrl: 'https://github.com/minnalabs/easely-docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
