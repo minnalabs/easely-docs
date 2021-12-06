@@ -1,0 +1,52 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'yarn'
+          cache-dependency-path: docs/yarn.lock
+
+      - name: Install dependencies
+        run: yarn install --prefer-offline --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Set vars
+        id: vars
+        run: |
+          echo "::set-output name=short_sha::$(git rev-parse --short HEAD)"
+
+      - name: Notify
+        env:
+          SLACK_BOT_TOKEN: ${{ inputs.slackbot-token }}
+          SHORT_SHA: ${{ steps.vars.outputs.short_sha }}
+        with:
+          channel-id: 'deploys'
+          slack-message: 'Deploying easely-docs (<https://github.com/minnalabs/easely-docs/commit/${{ env.SHORT_SHA }}|${{ env.SHORT_SHA }}>).'
+
+      - name: Deploy
+        run: |
+          aws s3 sync --delete build/ s3://docs.easely.io
+          aws cloudfront create-invalidation --distribution-id E18P033HQ54CKI --paths '/*';
