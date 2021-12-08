@@ -25,10 +25,6 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/minnalabs/easely-docs',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/minnalabs/easely-docs',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -48,11 +44,10 @@ const config = {
           items: [
             {
               type: 'doc',
-              docId: 'intro',
+              docId: 'about/introduction',
               position: 'left',
-              label: 'Tutorial',
+              label: 'Docs',
             },
-            {to: '/blog', label: 'Blog', position: 'left'},
           ],
         },
         footer: {
@@ -62,8 +57,8 @@ const config = {
               title: 'Docs',
               items: [
                 {
-                  label: 'Tutorial',
-                  to: '/docs/intro',
+                  label: 'Introduction',
+                  to: '/docs/about/introduction',
                 },
               ],
             },
@@ -77,15 +72,6 @@ const config = {
                 {
                   label: 'Twitter',
                   href: 'https://twitter.com/easelynft',
-                },
-              ],
-            },
-            {
-              title: 'More',
-              items: [
-                {
-                  label: 'Blog',
-                  to: '/blog',
                 },
               ],
             },
