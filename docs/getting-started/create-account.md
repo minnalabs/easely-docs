@@ -1,8 +1,18 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Creating an Account
+
+Welcome to Easely - please start by creating account on our MainNet (coming soon) and our [TestNet](https://app.rinkeby.easely.io/).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u1jp-Qca4Jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### TestNet vs. MainNet
+
+Because most blockchains incur nontrivial transaction fees, test blockchains ("TestNet") were created for free development purposes. Most NFT creators utilize these TestNets when creating their NFTs, often with test wallets to mask their developmental work from the world. 
+
+On Ethereum, the primary network is denoted "MainNet" with many test blockchains (Rinkeby, Ropsten, Kovan, etc.) as "TestNets". Easely offers a TestNet version of the platform on `Rinkeby`. It is highly recommended to test on `Rinkeby` first prior to any deployment / execution of contracts on MainNet. You can request for Rinkeby TestNet ETH [here](https://faucet.rinkeby.io/) or contact the Easely team on [Discord](https://discord.gg/VsJuceBV) and we will gladly send some over!
 
 ### Your Wallet is Your Identity
 
@@ -12,7 +22,7 @@ Thus, your wallet is also the basis of your Easely account. This way all smart c
 
 ### Signing Up
 
-Sign up is as easy as connecting your MetaMask wallet, claiming your creator name, and verifying your email.
+Sign up is as easy as connecting your MetaMask wallet, claiming your creator name, and verifying your email. 
 
 ### Logging In
 
