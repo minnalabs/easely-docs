@@ -22,6 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/minnalabs/easely-docs',
         },
@@ -41,14 +42,6 @@ const config = {
             alt: 'Easely logo',
             src: 'img/logo192.png',
           },
-          items: [
-            {
-              type: 'doc',
-              docId: 'About/introduction',
-              position: 'left',
-              label: 'Docs',
-            },
-          ],
         },
         footer: {
           style: 'dark',
@@ -58,7 +51,7 @@ const config = {
               items: [
                 {
                   label: 'Introduction',
-                  to: '/docs/About/introduction',
+                  to: '/',
                 },
               ],
             },
