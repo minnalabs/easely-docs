@@ -16,7 +16,7 @@ Easely has a mission to empower anyone to create on Web3 with no code. **We are 
 
 * **Your contracts, no-code, zero overhead:** Creators can use Easely to create their own contracts completely by themselves with no-code (zero programming knowledge required). There is no application process or minimum twitter follower requirement - all creators deserve equal access to create in Web3. 
 * **Horizontal feature development:** Easely is the first no-code smart contract platform with flexible and end-to-end features such as randomized packes, burn mechanics, lazy minting, and mint buttons. This isn't just a minting platform to create a single NFT. Easely is committed to enabling all creators with access to the most popular NFT features
-* **Quality and trust:** Many people compare building in Web3 to building a rocketship - a single loose screw in a smart contract and the whole thing can be worthless. The process requires high volumes of testing, iteration, and frankly mistakes, to nail down. Easely takes all the "L"s in this process so they can provide all creators with industry-grade smart contracts optimized for price, ownership, and efficiency.
+* **Quality and trust:** Many people compare building in Web3 to building a rocketship - a single loose screw in a smart contract and the whole thing can be worthless. The process requires high volumes of testing, iteration, and frankly mistakes, to nail down. Easely does the hard work for you so we can provide all creators with industry-grade smart contracts optimized for price, ownership, and efficiency.
 
 ### Roadmap
 

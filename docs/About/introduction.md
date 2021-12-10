@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Introduction
 
+If you want to get started right off the bat, feel free to check out our video tutorials for [standard](https://youtube.com/playlist?list=PL7ES5dIQALn5F7IISBZ6fVCkwnfC_URqe) and [randomized](https://youtube.com/playlist?list=PL7ES5dIQALn5tPg0i7AwtIYcxFhq6cnkz) collections. 
+
 ### What is Easely? 
 
 Easely is a no-code platform for NFT development currently on Ethereum. We create a suite of tools, apps, smart contracts, and more to allow creators with no coding knowledge create complex NFT experiences. Currently, Easely has the following products and features live:
