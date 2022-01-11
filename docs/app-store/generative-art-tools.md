@@ -174,11 +174,11 @@ This program will ask you which `draft` folder you are working out of. `submit-i
 
 ### Step 5: Uploading to IPFS and Turning the Collection into NFTs
 
-The final step is to upload your collection to [IPFS](ipfs.io), the decentralizing file storing protocol and the industry standard for storing NFTs today. An easy way to store your files can be done via [Pinata](pinata.cloud) and it is recommended that you pin the NFTs yourself (so noone but you can ever possibly unpin them!). **If you have trouble pinning or prefer not to pin the images to your final generative art collection, feel free to contact the Easely team in our Discord and we will help you out!** Otherwise, see below instructions on pinning and uploading your images to IPFS. 
+The final step is to upload your collection to [IPFS](htpps://ipfs.io), the decentralizing file storing protocol and the industry standard for storing NFTs today. An easy way to store your files can be done via [Pinata](https://pinata.cloud) and it is recommended that you pin the NFTs yourself (so noone but you can ever possibly unpin them!). **If you have trouble pinning or prefer not to pin the images to your final generative art collection, feel free to contact the Easely team in our Discord and we will help you out!** Otherwise, see below instructions on pinning and uploading your images to IPFS. 
 
 #### Create a Pinata Account
 
-Create a [Pinata](pinata.cloud) account and choose the plan appropriate for your collection (pinata offers free hosting up to 1GB of data). 
+Create a [Pinata](https://pinata.cloud) account and choose the plan appropriate for your collection (pinata offers free hosting up to 1GB of data). 
 
 #### Create and Store your API Keys
 
@@ -196,4 +196,4 @@ You will be prompted to name the collection that you would like to submit and th
 
 ### Step 6: Save the IPFS CID and Create your Collection on Easely
 
-Once the images have been saved to IPFS successfully, a new folder in `final` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](app.easely.io) or [Easely TestNet](app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the final images to your generative NFT collection via the IPFS CID that you will drop in once prompted in the NFT creation process!
+Once the images have been saved to IPFS successfully, a new folder in `final` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](https://app.easely.io) or [Easely TestNet](https://app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the final images to your generative NFT collection via the IPFS CID that you will drop in once prompted in the NFT creation process!
