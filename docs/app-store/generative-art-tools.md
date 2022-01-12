@@ -7,7 +7,7 @@ sidebar_position: 1
 Easely also offers tools to help creators create their generative NFTs (aka PFP and avatar collections). Generative NFTs layer various traits (backgrounds, bodies, hats, accessories, etc.) on top of each other to randomly create unique NFTs. This has been popularized by CryptoPunks, Bored Ape Yacht Club, Pudgy Penguins, and many, many more collections. 
 
 Although the value of these PFP projects started out purely as collector value, these NFTs have evolved into so much more: 
-* Elgibility to receive additional incentives via airdrops and staking
+* Eligibility to receive additional incentives via airdrops and staking
 * Membership to communities and DAOs 
 * Access to real-world events as seen by the craze of NFT NYC, Art Basel Miami, and more 
 * Gaming characters, items, accessories, or more
@@ -28,7 +28,7 @@ Some rules to keep in mind when you think about designing your layers:
 
 First, you want to determine what the layers are, how many there are, and the ordering in which they are layered. Then, you can begin creating the traits within each layer. It is important to create the traits in a manner in which they all "work" with each other (e.g. all the different "body" traits work with the various "accessory" traits). Filters can be added to guarantee or exclude certain combinations but can get complex if you add too many. 
 
-Traits should be organized in a self-explanatory manner on your computer. Each "layer" should be a "folder" (and named properly) with the following traits as PNG files in each "layer folder". As you can see in the example below, all the "rice" PNG traits should be in a "rice" layer folder. (Note: you can name these folders however you'd like as you will define the trait categories later. We find it helpful to add in the order number to stay organized)
+Traits should be organized the following manner. Each "layer" should be a "folder" with its respective traits as PNG files in them. In the example below, all the "rice" PNG traits should be in a "rice" layer folder. (Note: you can name these folders however you'd like as you will define the trait categories later. We find it helpful to add in the order number to stay organized)
 
 ![layer-folder-example](layer-trait-folder-mgmt.png)
 
@@ -42,7 +42,7 @@ VS Code is a dev environment that you will need to use Easely's generative art p
 
 #### Download Python3, pip, and required packages
 
-Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downlaoded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) or Command Line (Windows) to check your version is up to date
+Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downloaded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) or Command Line (Windows) to check your version is up to date
 
 ```jsx
 python3 -version
@@ -124,10 +124,10 @@ CONFIG = [
 1. `id`: This is the order in which layers are placed on top of each other sequentially, starting with 1 and incrementing by 1. The program will randomly choose a trait from `id = 1` and layer on a trait from `id = 2` and so on and so forth
 2. `directory`: This is the folder name for the layer (and where the traits for that layer are located). This must match the exact folder name or the program will not run successfully 
 3. `name`: This is the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. **It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs**
-4. `required`: Whether or not a trait from this category is required for the NFT. Can take on either `True` or `False`
+4. `required`: Whether a trait from this category is required for the NFT. Can take on either `True` or `False`
 5. `rarity_weights`: One of the most important characteristics for large PFP collections is rarity distribution which can be configured here. There are two options: `None` and `Probability List`
     * `None`: This option results in equal weighting for all traits within that layer 
-    * `Proability List`: This option lets you define the probabilities for each trait within each layer. The `Probability List` is defined within hard brackets **in which each number is the percentage that that trait shows up**. Let's use the following example reflecting the above config:
+    * `Probability List`: This option lets you define the probabilities for each trait within each layer. The `Probability List` is defined within hard brackets **in which each number is the percentage that that trait shows up**. Let's use the following example reflecting the above config:
         
         ```jsx
         Layer/Name = `Eyes`,
@@ -173,7 +173,7 @@ This will re-generate all the images based solely on the final `metadata.csv` fi
 
 #### Method 2: Delete Images in the `output` Folder 
 
-If you are not as savvy with spreadsheets / data analysis or working with smaller sample sets, you can also delete the images rather than deleting rows of metadata within the spreadsheet. For example if you had 12 images and you only wanted to keep 10, delete the 2 images - **you do not need to change the metadta file**. Then run the following:
+If you are not as savvy with spreadsheets / data analysis or working with smaller sample sets, you can also delete the images rather than deleting rows of metadata within the spreadsheet. For example if you had 12 images and you only wanted to keep 10, delete the 2 images - **you do not need to change the metadata file**. Then run the following:
 
 ```jsx
 python3 submit-images.py
@@ -183,7 +183,7 @@ This program will ask you which `draft` folder you are working out of. `submit-i
 
 ### Step 5: Uploading to IPFS and Turning the Collection into NFTs
 
-The final step is to upload your collection to [IPFS](htpps://ipfs.io), the decentralizing file storing protocol and the industry standard for storing NFTs today. An easy way to store your files can be done via [Pinata](https://pinata.cloud) and it is recommended that you pin the NFTs yourself (so noone but you can ever possibly unpin them!). **If you have trouble pinning or prefer not to pin the images to your final generative art collection, feel free to contact the Easely team in our Discord and we will help you out!** Otherwise, see below instructions on pinning and uploading your images to IPFS. 
+The final step is to upload your collection to [IPFS](htpps://ipfs.io), the decentralizing file storing protocol and the industry standard for storing NFTs today. An easy way to store your files can be done via [Pinata](https://pinata.cloud) and it is recommended that you pin the NFTs yourself (so noone but you can ever possibly unpin them!). **If you have trouble pinning or prefer not to pin the images to your final generative art collection, feel free to contact the Easely team in our Discord, and we will help you out!** Otherwise, see below instructions on pinning and uploading your images to IPFS. 
 
 #### Create a Pinata Account
 
