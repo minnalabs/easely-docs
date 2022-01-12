@@ -10,10 +10,10 @@ Although the value of these PFP projects started out purely as collector value, 
 * Elgibility to receive additional incentives via airdrops and staking
 * Membership to communities and DAOs 
 * Access to real-world events as seen by the craze of NFT NYC, Art Basel Miami, and more 
-* Gaming
-* Metaverse 
+* Gaming characters, items, accessories, or more
+* Any item in a metaverse
 
-And that is just the beginning - the beauty of NFTs is how interoperable they are, once you create your own collection and smart contract, you can integrate your NFT collection effortlessly with marketplaces, metaverses, social medias, and more. 
+**And that is just the beginning - the beauty of NFTs is how interoperable they are, once you create your own collection and smart contract, you can integrate your NFT collection effortlessly with marketplaces, metaverses, social medias, and more.** 
 
 ### Step 1: Creating the Layers 
 
@@ -21,30 +21,36 @@ Before even thinking about the blockchain, artists need to create the individual
 
 Some rules to keep in mind when you think about designing your layers:
 * Traits are layered in sequential order (e.g. background --> body --> accessory)
-* All traits should be the same dimension 
-* All traits should have transparent background (outside of a background trait)
+* All traits should be the same exact dimension 
+* All traits should have transparent backgrounds (outside of a background trait)
 * Useful for later: take note of what "filters" need to be added (e.g. the Aliens in CryptoPunks don't have hair because, well, aliens don't have hair)
 * Useful for later: take note of what "rarities" should be attributed to each trait and what the end rarity distribution for the entire collection should be
 
 First, you want to determine what the layers are, how many there are, and the ordering in which they are layered. Then, you can begin creating the traits within each layer. It is important to create the traits in a manner in which they all "work" with each other (e.g. all the different "body" traits work with the various "accessory" traits). Filters can be added to guarantee or exclude certain combinations but can get complex if you add too many. 
 
-Traits should be organized in a self-explanatory manner on your computer. Each "layer" should be a "folder" (and named properly) with the following traits as PNG files in each "layer folder". For example, all my "Background" PNG images should be in my "Background" folder. 
+Traits should be organized in a self-explanatory manner on your computer. Each "layer" should be a "folder" (and named properly) with the following traits as PNG files in each "layer folder". As you can see in the example below, all the "rice" PNG traits should be in a "rice" layer folder. (Note: you can name these folders however you'd like as you will define the trait categories later. We find it helpful to add in the order number to stay organized)
+
+![layer-folder-example](layer-trait-folder-mgmt.png)
 
 ### Step 2: Prepping the Work Environment
 
-In order to Easely's tools, it is required to download some basic dev apps. Don't worry - there will be no coding required - the actual "dev" work should be as trivial as copy and pasting code and filling out basic config details. 
+In order to Easely's tools, it is required to download some basic dev apps. **Don't worry - there will be no coding required - the actual "dev" work should be as trivial as copy and pasting code and filling out basic config details.** 
 
 #### Download VS Code
 
-VS Code is a standard dev environment that you will need to use Easely's generative art program. You can download and install it [here](https://code.visualstudio.com/download)
+VS Code is a dev environment that you will need to use Easely's generative art program. You can download and install it [here](https://code.visualstudio.com/download)
 
 #### Download Python3, pip, and required packages
 
-Python is a coding language and is typically built into operating systems today, but the latest version is recommended to reduce issues. Python3 can be downlaoded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/)
+Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downlaoded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) or Command Line (Windows) to check your version is up to date
 
-pip is the Python installer program that is used to install packages that will be used for this tool. Open Terminal (Mac) or Command Line (Windows) and type the following:
+```jsx
+python3 -version
+```
 
-```python
+pip is the Python installer program used to install useful packages used in our tool. Type and enter in Terminal (Mac) or Command Line (Windows)
+
+```jsx
 pip install Pillow pandas progressbar2
 ```
 
@@ -54,7 +60,7 @@ pip install Pillow pandas progressbar2
 
 #### Download and Opening Easely's Code Repo
 
-The last step is downloading Easely's [code repo](https://github.com/minnalabs/generative-art) that includes a set of programs for you to generate, revise, and finalize your art pieces. Unzip the file and move the folder inside (titled `easely-generative-art-tools`) to your preferred working location on your computer. 
+The last step is downloading Easely's [code repo](https://github.com/minnalabs/generative-art) that includes a set of programs for you to generate, revise, and finalize your art pieces. Unzip the file and move the folder (titled `easely-generative-art-tools`) to your preferred working location on your computer. 
 
 Now, open VS Code that you installed earlier and go to 
 
@@ -62,13 +68,14 @@ Now, open VS Code that you installed earlier and go to
 file --> open folder --> select the `easely-generative-art-tools` folder --> open
 ```
 
-VS Code will now open Easely's generative art programs and your work environment is successfully prepped! Here's a summary of the programs below and how they will be used throughout the rest of this guide:
+VS Code will now open Easely's generative art programs. There should be an `assets` - **copy all of your layer folders (with traits inside) here.** Your work environment is now successfully prepped! Here's a summary of the programs below and how they will be used throughout the rest of this guide:
 
 #### Programs
 1. `config.py`: File that defines all the parameters for your art generation: # of images, layer ordering, trait rarity probabilities, filters, and more. 
 2. `generate.py`: Program that generates the # of images (NFTs) depending on your `config.py` parameters
-3. `submit.py`: Program that generates the final images (NFTs) after revisions based on a final `metadata.csv` files 
-4. `upload.py`: Program that uploads your final images (NFTs) to IPFS, the gold standard of storing NFTs. Your NFT collection on the blockchain will then link to this IPFS directory that will exist in perpetuity
+3. `submit-metadata.py`: Program that generates the final images (NFTs) after revisions based on a final `metadata.csv` file
+4. `submit-images.py`: Program that generates the final metadata (NFTs) after revisions based on a final image set and original `metadata.csv` file 
+5. `upload.py`: Program that uploads your final images (NFTs) to IPFS, the gold standard of storing NFTs. Your NFT collection on the blockchain will then link to this IPFS directory that will exist in perpetuity
 
 #### Other
 1. `README.md`: Instructions on how to operate the various programs 
@@ -76,9 +83,11 @@ VS Code will now open Easely's generative art programs and your work environment
 3. `output` folder: Folder where your generated images will be 
 4. `final` folder: Folder that contains the final images / NFTs, metadata, and IPFS directory for your collection
 
-### Step 3: Configurating and Generating the Collection
+### Step 3: Configuring and Generating the Collection
 
 #### Configuration Parameters
+
+We will be using the following CONFIG below as an example to explain each parameter:
 
 ```jsx
 CONFIG = [
@@ -112,9 +121,9 @@ CONFIG = [
     }
 ```
 
-1. `id`: This is the order in which layers are placed on top of each other sequentially, starting with 1 and incrementing by 1. The program will choose a random trait from `id = 1` and layer on a trait from `id = 2` and so on and so forth
+1. `id`: This is the order in which layers are placed on top of each other sequentially, starting with 1 and incrementing by 1. The program will randomly choose a trait from `id = 1` and layer on a trait from `id = 2` and so on and so forth
 2. `directory`: This is the folder name for the layer (and where the traits for that layer are located). This must match the exact folder name or the program will not run successfully 
-3. `name`: This is the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs 
+3. `name`: This is the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. **It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs**
 4. `required`: Whether or not a trait from this category is required for the NFT. Can take on either `True` or `False`
 5. `rarity_weights`: One of the most important characteristics for large PFP collections is rarity distribution which can be configured here. There are two options: `None` and `Probability List`
     * `None`: This option results in equal weighting for all traits within that layer 
@@ -196,4 +205,4 @@ You will be prompted to name the collection that you would like to submit and th
 
 ### Step 6: Save the IPFS CID and Create your Collection on Easely
 
-Once the images have been saved to IPFS successfully, a new folder in `final` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](https://app.easely.io) or [Easely TestNet](https://app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the final images to your generative NFT collection via the IPFS CID that you will drop in once prompted in the NFT creation process!
+Once the images have been saved to IPFS successfully, a new folder in `final` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](https://app.easely.io) or [Easely TestNet](https://app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the **final images to your generative NFT collection hosted on IPFS, accessible via the IPFS CID** that you will drop in once prompted in the NFT creation process!
