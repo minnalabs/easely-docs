@@ -106,11 +106,9 @@ filetype: "png"
 assets:
   path: "assets"
   layers:
-    - name: "BG"
-      directory: "01_background"
+    - name: "Background"
       required: True
     - name: "Rice"
-      directory: "02_rice"
       required: True
       rarity_weights:
         Black: 10
@@ -118,10 +116,8 @@ assets:
         Iridescent: 5 
         Sushi: 50
     - name: "Nori"
-      directory: "03_nori"
       required: True
     - name: "Topping"
-      directory: "04_topping"
       required: False
       rarity_weights:
         None: 80
@@ -136,8 +132,7 @@ assets:
 1. `count`: The number of unique images you wish to generate after duplicates have been removed and rules have been applied
 2. `filetype`: Specify whether images files are JPGs or PNGs
 3. `layers`: The schema for each `layer` of your NFT, e.g. 'background' or 'body' or 'accessory'. Layers have 4 components to them: `name`, `directory`, `required`, and `rarity_weights` 
-    * `name`: This is the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. **It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs**
-    * `directory`: The folder name for the layer that all the traits are in. Can be the same as `name` or different for folder organization purposes
+    * `name`: This is the layer name **and folder name** that your traits are in. This will also be the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. **It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs**
     * `required`: Whether or not a trait within this layer is required, denoted by a `True` or `False`. If `False`, there is a chance that no trait within the layer will be selected  
     * `rarity_weights`: The ability to specify different probabilities for each trait within a layer. A couple rules regarding rarity weights:
         * If `rarity_weights` is not specified, there is an equal chance that all traits get selected (including the odds of no trait if `required: False`)
