@@ -1,19 +1,20 @@
 ---
 sidebar_position: 1
 ---
-
 # Generative Art Tools
 
-Easely offers tools to help creators create their generative NFTs (PFP and avatar collections) - the first of many apps in the NFT app ecosystem Easely plans to launch. Generative NFTs layer various traits (backgrounds, bodies, hats, accessories, etc.) on top of each other to randomly create unique NFTs. This has been popularized by CryptoPunks, Bored Ape Yacht Club, Azukis, and many, many more collections. 
+![pfp-banner](pics/pfp-banner.jpeg)
 
-Although the value of PFP projects started out purely as collector value, these NFTs have evolved into so much more: 
+Easely offers tools to help creators create their generative NFTs (PFP and avatar collections). Generative NFTs layer various traits (backgrounds, bodies, hats, accessories, etc.) on top of each other to randomly generate unique NFTs. This has been popularized by CryptoPunks, Bored Ape Yacht Club, Azuki, and many, many more collections. 
+
+Although the value of PFP projects started out purely as collector value, generative NFTs have evolved into so much more: 
 * Eligibility to receive additional incentives via airdrops and staking
 * Membership to communities and DAOs 
-* Access to real-world events as seen by the craze of NFT NYC, Art Basel Miami, and more 
-* Gaming characters, items, accessories, or more
-* Any item in a metaverse
+* Access to real-world events as seen at NFT NYC, Art Basel Miami, and more 
+* Gaming characters, items, and accessories
+* Land in the metaverse
 
-**And that is just the beginning - the beauty of NFTs is how interoperable they are, once you create your own collection and smart contract, you can integrate your NFT collection effortlessly with marketplaces, metaverses, social medias, and more.** 
+**And that is just the beginning - the beauty of NFTs is how interoperable they are, once you create your own collection and smart contract, you can integrate your NFT collection effortlessly with marketplaces, metaverses, communities, games, and more.** 
 
 ### Step 1: Creating the Layers 
 
@@ -21,16 +22,16 @@ Before even thinking about the blockchain, artists need to create the individual
 
 Some rules to keep in mind when you think about designing your layers:
 * Traits are layered in sequential order (e.g. background --> body --> accessory)
-* All traits should be the same exact dimension 
+* All traits should be the same exact dimensions
 * All traits should have transparent backgrounds (outside of a background trait)
 * Useful for later: take note of what "filters" need to be added (e.g. the Aliens in CryptoPunks don't have hair because, well, aliens don't have hair)
 * Useful for later: take note of what "rarities" should be attributed to each trait and what the end rarity distribution for the entire collection should be
 
 First, you want to determine what the layers are, how many there are, and the ordering in which they are layered. Then, you can begin creating the traits within each layer. It is important to create the traits in a manner in which they all "work" with each other (e.g. all the different "body" traits work with the various "accessory" traits). Filters can be added to guarantee or exclude certain combinations but can get complex if you add too many. 
 
-Traits should be organized the following manner. Each "layer" should be a "folder" with its respective traits as PNG files in them. In the example below, all the "rice" PNG traits should be in a "rice" layer folder. (Note: you can name these folders however you'd like as you will define the trait categories later. We find it helpful to add in the order number to stay organized)
+Traits should be organized the following manner. Each "layer" should be a "folder" with its respective traits as PNG files in them. In the example below, all the "rice" PNG traits should be in a "rice" layer folder. (Note: how you name these folders is how the layer category will show up in the metadata so use proper formatting and capitalization as much as you can)
 
-![layer-folder-example](layer-trait-folder-mgmt.png)
+![layer-folder-example](pics/layer-trait-folder-mgmt.png)
 
 ### Step 2: Prepping the Work Environment
 
@@ -42,33 +43,37 @@ VS Code is a dev environment that you will need to use Easely's generative art p
 
 #### Download and Open Easely's Code Repo
 
-Next, download Easely's [code repo](https://github.com/minnalabs/generative-art) that includes a set of programs for you to generate, revise, and finalize your art pieces. Unzip the file and move the folder (titled `easely-generative-art-tools`) to your preferred working location on your computer. 
+Next, download Easely's [code repo](https://github.com/minnalabs/generative-art) that includes a set of programs for you to generate, revise, and finalize your art pieces. Unzip the file and move the folder (titled `easely-generative-art`) to your preferred working location on your computer. 
 
-**SCEENSHOT**
+![download-github-repo](pics/download-github-repo.png)
 
 Now, open VS Code that you installed earlier and go to 
 
 ```
-file --> open folder --> select the `easely-generative-art-tools` folder --> open
+file --> open folder --> select the `easely-generative-art` folder --> open
 ```
 
-**SCEENSHOT**
+![vscode-open-folder](pics/vscode-open-folder.png)
 
-VS Code will now open Easely's generative art programs. There should be an `assets` folder - **copy all of your layer folders (with traits inside) here.** 
+VS Code will now open Easely's generative art programs. There should be an `assets` folder - **you can test with these example layers or replace this folder with your layers and traits.** 
 
 #### Download Python3, pip, and required packages
 
+**NOTE: The below instructions are for Mac computers, please see the Windows tutorial in the appendix below** 
+
 The last step is to download the correct software languages and packages used in the generative art program. For the more technically inclined, you can find the list of programs in the `requirements.txt` file. 
 
-Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downloaded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) or Command Line (Windows) to check your version is up to date
+Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downloaded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) to check your version is up to date and that python3 is working properly.
 
 ```jsx
-python3 -version
+python3 --version
 ```
+
+![python-version-command](pics/python-version-command.png)
 
 pip is the Python installer program used to install the remaining packages in our tool. **Open up a new Terminal / Command Line in VS Code** (menu --> Terminal --> New Terminal). A console should pop up underneath the code that you can type in. 
 
-**SCREENSHOT**
+![vscode-open-terminal](pics/vscode-open-terminal.png)
 
 Type and enter the following to install all the required packages
 
@@ -76,9 +81,7 @@ Type and enter the following to install all the required packages
 pip3 install -r requirements.txt
 ```
 
-**SCREENSHOT**
-
-Your work environment is now successfully prepped! Here's a summary of the programs below and how they will be used throughout the rest of this guide:
+You should receive a successful installation message and now your work environment is now successfully prepped! Here's a summary of the programs below and how they will be used throughout the rest of this guide:
 
 #### Programs
 1. `generate_from_layers.py`: Program that generates the images (NFTs) from your layers and traits depending on your `config.yaml` parameters
@@ -101,37 +104,47 @@ Your work environment is now successfully prepped! Here's a summary of the progr
 Otherwise, you will configure your generation parameters in a `config.yaml` files. We will be using the following below as an example to explain each parameter:
 
 ```jsx
-count: 150 // number of unique 
+count: 1000
 filetype: "png"
 assets:
   path: "assets"
   layers:
-    - name: "Background"
+    - name: "background"
       required: True
-    - name: "Rice"
+    - name: "punks"
       required: True
       rarity_weights:
-        Black: 10
-        Golden: 35
-        Iridescent: 5 
-        Sushi: 50
-    - name: "Nori"
+        alien: .1 // decimals work too! .1 = .1% 
+        ape: .9
+        female1: 12
+        female2: 12
+        female3: 12
+        female4: 12
+        male1: 12
+        male2: 12
+        male3: 12
+        male4: 12
+        zombie: 3
+    - name: "top"
       required: True
-    - name: "Topping"
+    - name: "beard"
+      required: True
+    - name: "glasses"
+      required: False
+    - name: "mouth"
+      required: False
+    - name: "cheek"
+      required: False
+    - name: "chain"
       required: False
       rarity_weights:
         None: 80
-        Unagi: 5
-        Cucumber: 5
-        Ebi: 5
-        Salmon Roe: 1 
-        Salmon: 1
-        Tamago: 1
-        Tuna: 2
+        gold_chain: 10
+        silver_chain: 10
 ```
 1. `count`: The number of unique images you wish to generate after duplicates have been removed and rules have been applied
 2. `filetype`: Specify whether images files are JPGs or PNGs
-3. `layers`: The schema for each `layer` of your NFT, e.g. 'background' or 'body' or 'accessory'. Layers have 4 components to them: `name`, `directory`, `required`, and `rarity_weights` 
+3. `layers`: The schema for each `layer` of your NFT, e.g. 'background' or 'body' or 'accessory'. Layers have 3 components to them: `name`, `required`, and `rarity_weights` 
     * `name`: This is the layer name **and folder name** that your traits are in. This will also be the official metadata name for the layer: what gets stored on the blockchain and what gets populated in secondary marketplaces or rarity tools that read the blockchain. **It is important that you have the exact syntax (capitalization, symbols, etc.) when generating the NFTs**
     * `required`: Whether or not a trait within this layer is required, denoted by a `True` or `False`. If `False`, there is a chance that no trait within the layer will be selected  
     * `rarity_weights`: The ability to specify different probabilities for each trait within a layer. A couple rules regarding rarity weights:
@@ -141,8 +154,41 @@ assets:
         * All % probabilities must sum to 100 
         * If `required: False`, you must add a % probability to `None` aka the probability for no trait 
         * The output will not perfectly reflect your `rarity_weights` depending on how many images you're generating, how many duplicates need to be removed, how strict your configurations are, what rules you apply, and many other factors. `rarity_weights` are meant to help you progress in a manner that is directionally correct - this process is certainly never completed in just 1 generation
+        * Trait names must match file names exactly - do not worry including the file extension (e.g. .png)
 
 Once all parameters are set, let's move on to actual image generation!
+
+#### Advanced Configuration Parameters: Rules
+
+As mentioned earlier, often times there are certain rules you want your trait generation to adhere to. Easely's generative art program has the ability to set `notequals` and `equals` rules on your traits. This can be found in the example config under `rules:` right below the trait config: 
+
+```jsx
+rules:
+  - filter: "notequals"
+    trait_1:
+      name: "punks"
+      value: "alien"
+    trait_2:
+      name: "top"
+      value: "wild_blonde"
+  - filter: "notequals"
+    trait_1:
+      name: "punks"
+      value: "alien"
+    trait_2:
+      name: "top"
+      value: "wild_hair"
+  - filter: "equals"
+    trait_1:
+      name: "background"
+      value: "purple"    
+    trait_2:
+      name: "punks"
+      value: "female1"
+```
+
+In this example, the `alien` trait will never be matched with `wild_blone` or `wild_hair` hat traits (because aliens don't have hair!). `puprple` backgrounds will also always result in the `female1` trait. **If you do not want to include any rules, feel free to delete this portion of the `config.yaml` file and no rules will be applied** 
+
 
 #### Generation 
 
@@ -156,6 +202,8 @@ python3 generate_from_layers.py
 
 You will be prompted to name your collection - answer accordingly in the terminal and hit enter. Once the program finishes (and the progress bar is complete) you can navigate into your `outputs` folder and see the collection you just created with an `images` and `metadata` folder. The `metadata` folder will have a .csv file (spreadsheet) of all the randomly generated traits based on the `config.yaml` parameters, with duplicates removed and rules applied. The `images` folder will have the respective images with filenames that tie to the `metadata.csv` file.
 
+![pics/gen-from-layers-example](pics/gen-from-layers-example.png)
+
 **2. Creators with Assets + Metadata:** Create a new folder in `outputs` with your collection name. In that folder, create another folder called `metadata`. In the `metadata` folder you just created, drop in your `metadata.csv` file that should be structured in the following format: 
 
 | filename  | layer 1    | layer 2    | layer 3    | layer N...    |
@@ -164,13 +212,34 @@ You will be prompted to name your collection - answer accordingly in the termina
 | file 2    |            | trait 1    | trait 1    |               |
 | file N... | trait 2    |            | trait 2    | trait 6       |
 
-Please note that the `layer` names should match the folder names in your `assets` folder and be laid out in sequential order as each increasing layer is layered on top of the previous one. The `trait` names should also match the trait files in each layer folder as well (no extension, e.g. .png, necessary in `metadata.csv`. `filename` you can either fill out or leave blank - it will be rewritten after the image generation is completed such that each row of metadata matches the correct image name. Now run the program:
+Please note that the `layer` names should match the folder names in your `assets` folder and be laid out in sequential order as each increasing layer is layered on top of the previous one. The `trait` names should also match the trait files in each layer folder as well (no extension, e.g. .png, is necessary in `metadata.csv`). **All layer and trait names must match the resulting files and folders with the exact syntax (capitalization, spacing, etc.) for the program to execute.** `filename` you can either fill out or leave blank - it will be rewritten after the image generation is completed such that each row of metadata matches the correct image name. Now run the program:
+
+Then you want to edit your `config.yaml` file so the program knows the ordering of the layers to generate from your metadata. Since we are just generating from a spreadsheet of metadata, none of the other parameters (e.g. count, rarity_weights, required, etc.) will be relevant here. List the layers and their folder names in the order you want them to be generated. 
+
+```jsx
+filetype: "png"
+assets:
+  path: "assets"
+  layers:
+    - name: "background"
+    - name: "punks"
+    - name: "top"
+    - name: "beard"
+    - name: "glasses"
+    - name: "mouth"
+    - name: "cheek"
+    - name: "chain"
+```
+
+Now execute the following program in the terminal to generate images from pre-determined metadata!
 
 ```jsx
 python3 generate_from_metadata.py
 ``` 
 
-and you will be prompted to enter the collection (folder) name. Answer accordingly with the folder you just created. The program will run and generate images based off the `metadata.csv` file!  
+and you will be prompted to enter the collection (folder) name. Answer accordingly with the folder you just created. The program will run and generate images based off the `metadata.csv` file.
+
+![gen-from-metadata-example](pics/gen-from-metadata-example.png)
 
 ### Step 4: Curating and Finalizing the Collection
 
