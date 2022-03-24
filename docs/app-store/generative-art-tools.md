@@ -5,6 +5,8 @@ sidebar_position: 1
 
 ![pfp-banner](pics/pfp-banner.jpeg)
 
+**NOTE: If you have any questions or would like an onboarding call, hop into our [Discord](https://discord.gg/YpA4JumgC2) and reach out to anyone on the Easely team.** 
+
 Easely offers tools to help creators create their generative NFTs (PFP and avatar collections). Generative NFTs layer various traits (backgrounds, bodies, hats, accessories, etc.) on top of each other to randomly generate unique NFTs. This has been popularized by CryptoPunks, Bored Ape Yacht Club, Azuki, and many, many more collections. 
 
 Although the value of PFP projects started out purely as collector value, generative NFTs have evolved into so much more: 
@@ -63,7 +65,7 @@ VS Code will now open Easely's generative art programs. There should be an `asse
 
 The last step is to download the correct software languages and packages used in the generative art program. For the more technically inclined, you can find the list of programs in the `requirements.txt` file. 
 
-Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downloaded and installed [here](https://www.python.org/downloads/https://www.python.org/downloads/). Type and enter in Terminal (Mac) to check your version is up to date and that python3 is working properly.
+Python is a coding language and is built into most operating systems today, but the latest version is recommended to reduce issues. Python3 can be downloaded and installed [here](https://www.python.org/downloads/). Type and enter in Terminal (Mac) to check your version is up to date and that python3 is working properly.
 
 ```jsx
 python3 --version
@@ -275,4 +277,4 @@ You will be prompted to name the collection that you would like to submit and th
 
 ### Step 6: Save the IPFS CID and Create your Collection on Easely
 
-Once the images have been saved to IPFS successfully, a new folder in `final` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](https://app.easely.io) or [Easely TestNet](https://app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the **final images to your generative NFT collection hosted on IPFS, accessible via the IPFS CID** that you will drop in once prompted in the NFT creation process!
+Once the images have been saved to IPFS successfully, a new folder titled `ipfs` will be created with a single file that contains the IPFS CID (Content Identifier) for your NFTs! Now go ahead and head over to [Easely MainNet](https://app.easely.io) or [Easely TestNet](https://app.rinkeby.easely.io) and create a `Randomized Collection`. You now have the **final images to your generative NFT collection hosted on IPFS, accessible via the IPFS CID** that you will drop in once prompted in the NFT creation process!
