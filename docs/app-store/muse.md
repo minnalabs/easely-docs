@@ -29,7 +29,7 @@ Once you have your image in place, we can add the buy button. To do so, click "A
 
 Click "Specify" and paste in the following ID to add the buy button.
 ```text
-351e206-edb0-4278-adc6-5b79d6a91464
+e6b248a2-05c3-40f1-93fb-a283a186d3a2
 ```
 
 ![click specify](/img/muse/click_specify.png)
