@@ -24,23 +24,27 @@ Using the "Media" component, add the media for your NFT.
 
 ### Step 4: Add buy button
 Once you have your image in place, we can add the buy button. To do so, click "Add" on the build menu.
-[add button](/img/muse/click_add.png)
+
+![add button](/img/muse/click_add.png)
 
 Click "Specify" and paste in the following ID to add the buy button.
 ```text
 351e206-edb0-4278-adc6-5b79d6a91464
 ```
 
-[click specify](/img/muse/click_specify.png)
-[use custom idea](/img/muse/use_custom_idea.png)
+![click specify](/img/muse/click_specify.png)
+
+![use custom idea](/img/muse/use_custom_idea.png)
 
 ### Step 5: Configure
 Once you hit "Add", you should see a blank button pop up. Click on it to configure the settings.
-[set parameters](/img/muse/set_parameters.png)
+
+![set parameters](/img/muse/set_parameters.png)
 
 In the top box, paste in your listing ID. You can navigate to it from the [Collections](https://app.easely.io/collections) page.
 It should look like `lst_...`.
-[listing id](/img/muse/listing_id.png)
+
+![listing id](/img/muse/listing_id.png)
 
 In the second box, you can customize the text that's shown on the button.
 
@@ -54,4 +58,4 @@ Visitors to your world will now be able to view and mint your NFT without leavin
 If you're using a testnet listing, you can grab some ETH from the [faucet](https://faucets.chain.link/rinkeby) and give it a go.
 
 
-As always, feel free to let us know if you need help or have any feedback via [Discord](https://discord.gg/YpA4JumgC2).
+As always, please let us know if you need help or have any feedback via [Discord](https://discord.gg/YpA4JumgC2).
