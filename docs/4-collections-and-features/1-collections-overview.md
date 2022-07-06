@@ -20,4 +20,10 @@ NFTs are all about provenance, ownership, and individuality and you lose all tha
 
 ### Bespoke Contracts: The Easely Way
 
-"Why would anyone ever use a shared contract?" you may ask
+"Why would anyone ever use a shared contract?" you may ask. Because it's easy. And it was the easiest way to create your own NFT collection until Easely came along. But with Easely, you can own your own smart contract. And beyond just visually defining your collection, having your own smart contract is the only way to provide **token-gated utility** to your community. Some popular examples include:
+* Community access (e.g. Discord channels via [Collab.Land](https://collab.land/))
+* Airdrops
+* Event access (e.g. token-gated tickets via [Tokenproof](https://tokenproof.xyz/))
+* Metaverse
+* Galleries
+* So much more!

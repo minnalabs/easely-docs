@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Creating an Account
 
-Welcome to Easely - please start by creating account on our MainNet (coming soon) and our [TestNet](https://app.rinkeby.easely.io/).
+Welcome to Easely - please start by accessing our [platform](https://app.easely.io/).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u1jp-Qca4Jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
