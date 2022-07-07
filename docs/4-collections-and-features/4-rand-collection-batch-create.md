@@ -56,6 +56,6 @@ Basic Parameters
 
 Advanced Parameters
 * Set Starting Token ID: Token IDs typically start with **Token ID #0** in the world of NFTs. That said, we can offset this to start at **Token ID #1** or whatever starting ID you prefer.
-* Disable Easely Randomization: Easely randomizes the NFTs after the creator uploads their spreadsheet to 
+* Disable Easely Randomization: Easely's platform by default randomizes the mint order for your NFT collection to ensure the community that the creators were not privy to the final mint order at the time of mint. Buyers can fully trust that creators will not be able to “snipe rares” or “share metadata” beforehand. But, if the exact mint order for the collection is important to the collection itself (e.g. a dev mint), creators can elect to disable Easely's randomization here.
 
 Make sure to double check that your `metadata.csv` is formatted in the exact way you want your traits to appear on marketplaces and that **all images tie to their metadata correctly**. Happy building!
